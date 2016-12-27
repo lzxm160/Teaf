@@ -1,19 +1,19 @@
-#!/bin/bash
+ï»¿#!/bin/bash
 ###############################################################################
-# function:¼à¿ØÖ¸¶¨µÄ½ø³Ì
+# function:ç›‘æŽ§æŒ‡å®šçš„è¿›ç¨‹
 # trait	  :
 # author:away
 # history: 
 # init 2005-09-02
-#      2006-07-26 Í¬Ê±¿ÉÒÔ¼à¿Ø¶à¸ö½ø³Ì
-#      2008-05-23 Èç¹ûÓÐÃüÁîÐÐ²ÎÊý£¬ÒÔÃüÁîÐÐ²ÎÊýÎª×¼
+#      2006-07-26 åŒæ—¶å¯ä»¥ç›‘æŽ§å¤šä¸ªè¿›ç¨‹
+#      2008-05-23 å¦‚æžœæœ‰å‘½ä»¤è¡Œå‚æ•°ï¼Œä»¥å‘½ä»¤è¡Œå‚æ•°ä¸ºå‡†
 # 
 ###############################################################################
-#¼à¿Ø½ø³ÌÊý
+#ç›‘æŽ§è¿›ç¨‹æ•°
 KEEP_COUNT=2 
 
-#µÚÒ»Ïî½ø³ÌÐÅÏ¢£¬Èç¹ûÓÐÆäËûµÄ£¬ÒÀ´ÎÌîÐ´
-#½ø³ÌÃûºÍÆô¶¯Â·¾¶¼°¼à¿ØµÄÊ±¼ä¼ä¸ô
+#ç¬¬ä¸€é¡¹è¿›ç¨‹ä¿¡æ¯ï¼Œå¦‚æžœæœ‰å…¶ä»–çš„ï¼Œä¾æ¬¡å¡«å†™
+#è¿›ç¨‹åå’Œå¯åŠ¨è·¯å¾„åŠç›‘æŽ§çš„æ—¶é—´é—´éš”
 PROCESS_NAME[0]="isgw_svrd"
 START_PAHT[0]="/usr/local/isgw/bin/start.sh isgw_svrd"
 INTERVAL[0]="10"
@@ -24,7 +24,7 @@ START_PAHT[1]="/usr/local/isgw/bin/start.sh isgw_svrd"
 INTERVAL[1]="10"
 LOG_PATH[1]="/usr/local/isgw/bin/keeper.log"
 
-# ÃüÁîÐÐ²ÎÊýÖ»Ö§³Ö¼à¿ØÒ»¸ö½ø³Ì
+# å‘½ä»¤è¡Œå‚æ•°åªæ”¯æŒç›‘æŽ§ä¸€ä¸ªè¿›ç¨‹
 if [ $# -gt 0 ]
 then
 {

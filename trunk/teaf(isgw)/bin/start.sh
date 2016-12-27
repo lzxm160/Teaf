@@ -1,4 +1,4 @@
-#!/bin/sh
+ï»¿#!/bin/sh
 
 if [ $# -lt 1 ]
 then
@@ -18,9 +18,9 @@ export LD_LIBRARY_PATH=./
 export SYS_CONF_PATH=${ISGW_CFG}
 export SYS_SOCKET_TIMEOUT=2
 
-ulimit -c unlimited           #²úÉúcoreÎÄ¼þ£¬²»ÏÞÖÆcoreÎÄ¼þ´óÐ¡
-ulimit -n 20480               #ÐÞ¸ÄÁ¬½Ó¾ä±úÊý 
-ulimit -s 2048                #ÐÞ¸ÄÏß³ÌµÄ¶ÑÕ»´óÐ¡£¬±ÜÃâµ¥¸öÏß³ÌÊýÊ¹ÓÃÄÚ´æÌ«¶à
+ulimit -c unlimited           #äº§ç”Ÿcoreæ–‡ä»¶ï¼Œä¸é™åˆ¶coreæ–‡ä»¶å¤§å°
+ulimit -n 20480               #ä¿®æ”¹è¿žæŽ¥å¥æŸ„æ•° 
+ulimit -s 2048                #ä¿®æ”¹çº¿ç¨‹çš„å †æ ˆå¤§å°ï¼Œé¿å…å•ä¸ªçº¿ç¨‹æ•°ä½¿ç”¨å†…å­˜å¤ªå¤š
 
 #valgrind --tool=memcheck --leak-check=full --track-origins=yes --show-reachable=yes 
 ${ISGW_BIN}/${SVRD_NAME} 1>>${ISGW_BIN}/start.log 2>&1 &

@@ -1,14 +1,14 @@
 CXX=g++ -g
 CFLAGS= -DPDB -DADMIN_OPER #-DISGW_USE_REDIS #-DISGW_USE_LUA #-DISGW_USE_ASY #-DISGW_USE_IBC  -DISGW_USE_DLL
-INCLUDE= -I./ -I/data/lib/include/ -I../easyace/ -I/usr/local/include/mysql/ -I../comm/ -I../frm -I../../comm/ -I/usr/local/include/hiredis/
+INCLUDE= -I./ -I/data/lib/include/ -I../easyace/ -I/usr/local/include/mysql/ -I../comm/ -I../frm -I../../comm/ -I/usr/local/include/hiredis/ -I/usr/local/ace/include
 
 #ISGW_USE_DLL = 1
 ifdef ISGW_USE_DLL
-LIBS= -L./ -L/usr/local/lib/ -L../../comm/ -L/data/lib/lib/\
+LIBS= -L./ -L/usr/local/lib/ -L/opt/vagrant/embedded/lib -L/usr/local/ace/lib -L../../comm/ -L/data/lib/lib/\
       -lACE -lnsl -lm -lz -lc -ldl -lpthread -lrt #-llua /usr/local/lib/libmysqlclient_r.a -lhiredis
 else
-LIBS= -L./ -L/usr/local/lib/ -L../../comm/ -L/data/lib/lib/\
-      -static -lACE -lnsl -lm -lz -lc -ldl -lpthread -lrt #-llua -lmysqlclient_r -lhiredis
+LIBS= -L./ -L/usr/local/lib/ -L/opt/vagrant/embedded/lib -L/usr/local/ace/lib -L../../comm/ -L/data/lib/lib/\
+       -lACE -lnsl -lm -lz -lc -ldl -lpthread -lrt #-llua -lmysqlclient_r -lhiredis
 endif
 
 BINARY = $(patsubst %.cpp,%.o,$(wildcard *.cpp))
